@@ -20,8 +20,11 @@
 
 ### 1. 전용 어드민 대시보드
 - **GitHub OAuth Login**: 특정 사용자(`seru1027`) 전용 보안 로그인 시스템.
+  ![Admin Login](./public/images/screenshots/admin_login.png)
 - **Live Markdown Preview**: 글 작성 중 실시간으로 결과물을 확인하는 최적의 편집 환경.
+  ![Admin Editor](./public/images/screenshots/admin_dashboard.png)
 - **Auto-Commit CMS**: 글 작성 즉시 GitHub API를 통해 저장소에 커밋되어 별도 DB 없이 콘텐츠 관리.
+  ![Admin Preview](./public/images/screenshots/admin_preview.png)
 
 ### 2. 고성능 블로그 엔진
 - **Next.js 15+ App Router**: 최신 서버 컴포넌트 기반의 빠른 로딩과 SEO 최적화.
