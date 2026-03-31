@@ -1,6 +1,24 @@
 # 🌌 Secheol Blog: Midnight Aurora (AI ✕ Human 프로젝트)
 
-본 프로젝트는 **전공기초세미나** 수업의 일환으로 진행된 과제입니다. 최신 AI 에이전트(Claude, Gemini 등)와 인간 개발자의 밀도 높은 협업을 통해, 단순한 결과물을 넘어 현대적이고 프리미엄한 감성을 가진 기술 블로그를 완성하는 것을 목표로 했습니다.
+본 프로젝트는 **전공기초세미나** 수업의 일환으로 진행된 과제입니다. 최신 AI 에이전트(Claude, Gemini 등)와 인간 개발자의 밀도 높은 협업을 통해, 단순히 기능만 갖춘 웹사이트를 넘어 현대적이고 프리미엄한 감성을 가진 기술 블로그를 완성하는 것을 목표로 했습니다.
+
+---
+
+## 🖼️ 미리보기 (Preview)
+
+![Home Screen](./public/images/screenshots/home.png)
+*메인 화면: Midnight Aurora 테마와 글래스모피즘이 적용된 디자인*
+
+````carousel
+![Blog List](./public/images/screenshots/blog_list.png)
+<!-- slide -->
+![Admin Login](./public/images/screenshots/admin_login.png)
+<!-- slide -->
+![Admin Editor](./public/images/screenshots/admin_dashboard.png)
+<!-- slide -->
+![Admin Preview](./public/images/screenshots/admin_preview.png)
+````
+*순서대로: 블로그 포스트 목록, 어드민 로그인, 마크다운 에디터, 실시간 프리뷰*
 
 ---
 
@@ -9,16 +27,9 @@
 
 ---
 
-## 🎨 프로젝트 컨셉: Midnight Aurora
-미래지향적이고 몰입감 있는 사용자 경험을 위해 **심해의 네이비와 오로라의 그라데이션**을 모티브로 삼았습니다. 
-- **Glassmorphism**: 투명도와 블러 효과를 통한 현대적 레이아웃.
-- **Aurora Light**: 은은한 동적 광원 효과를 통한 프리미엄 감성.
-
----
-
 ## ✨ 핵심 기능 (Features)
 
-### 1. 전용 어드민 대시보드 (New!)
+### 1. 전용 어드민 대시보드
 - **GitHub OAuth Login**: 특정 사용자(`seru1027`) 전용 보안 로그인 시스템.
 - **Live Markdown Preview**: 글 작성 중 실시간으로 결과물을 확인하는 최적의 편집 환경.
 - **Auto-Commit CMS**: 글 작성 즉시 GitHub API를 통해 저장소에 커밋되어 별도 DB 없이 콘텐츠 관리.
@@ -27,6 +38,13 @@
 - **Next.js 15+ App Router**: 최신 서버 컴포넌트 기반의 빠른 로딩과 SEO 최적화.
 - **MDX 기반 포스팅**: 마크다운의 간결함과 리액트 컴포넌트의 유연함을 결합.
 - **반응형 디자인**: 모든 디바이스에서 최적화된 "Midnight Aurora" 테마 경험.
+
+---
+
+## 🎨 디자인 컨셉: Midnight Aurora
+미래지향적으로 몰입감 있는 사용자 경험을 위해 **심해의 네이비와 오로라의 그라데이션**을 모티브로 삼았습니다.
+- **Glassmorphism**: 투명도와 블러 효과를 통한 현대적 레이아웃.
+- **Aurora Light**: 은석인 동적 광원 효과를 통한 프리미엄 감성.
 
 ---
 
@@ -40,14 +58,13 @@
 
 ---
 
-## 🛠 기술 스택 (Tech Stack)
+## 🛠️ 기술 스택 (Tech Stack)
 
 - **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS, Framer Motion
 - **Auth**: GitHub OAuth
 - **Data Management**: GitHub REST API
-- **Icons**: Lucide React
 - **Content**: MDX (`next-mdx-remote`)
 
 ---
@@ -71,4 +88,4 @@
 
 ---
 
-> 본 항목은 전공기초세미나 수업 과제의 결과물입니다. AI와 인간의 협업이 만들어낼 수 있는 창의적인 웹 경험을 목표로 제작되었습니다.
+> 본 프로젝트는 전공기초세미나 수업 과제의 결과물입니다. AI와 인간의 협업이 만들어낼 수 있는 창의적인 웹 경험을 목표로 제작되었습니다.
