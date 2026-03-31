@@ -1,55 +1,74 @@
-# 🌌 Secheol Blog: Midnight Aurora
+# 🌌 Secheol Blog: Midnight Aurora (AI ✕ Human 프로젝트)
 
-프리미엄 디자인과 강력한 관리 기능을 갖춘 Next.js 기반의 개인 기술 블로그입니다. 
-"Midnight Aurora" 테마를 통해 세련된 사용자 경험을 제공하며, GitHub을 CMS로 활용하는 스마트한 아키텍처를 지향합니다.
+본 프로젝트는 **전공기초세미나** 수업의 일환으로 진행된 과제입니다. 최신 AI 에이전트(Claude, Gemini 등)와 인간 개발자의 밀도 높은 협업을 통해, 단순한 결과물을 넘어 현대적이고 프리미엄한 감성을 가진 기술 블로그를 완성하는 것을 목표로 했습니다.
+
+---
+
+## 🌐 라이브 사이트 (Live Demo)
+👉 **[secheol-blog.vercel.app](https://secheol-blog.vercel.app/)**
+
+---
+
+## 🎨 프로젝트 컨셉: Midnight Aurora
+미래지향적이고 몰입감 있는 사용자 경험을 위해 **심해의 네이비와 오로라의 그라데이션**을 모티브로 삼았습니다. 
+- **Glassmorphism**: 투명도와 블러 효과를 통한 현대적 레이아웃.
+- **Aurora Light**: 은은한 동적 광원 효과를 통한 프리미엄 감성.
+
+---
 
 ## ✨ 핵심 기능 (Features)
 
-### 👤 Admin Dashboard & Auth
+### 1. 전용 어드민 대시보드 (New!)
 - **GitHub OAuth Login**: 특정 사용자(`seru1027`) 전용 보안 로그인 시스템.
-- **Smart Session**: Server-side 세션 관리를 통한 안전한 어드민 접근 제어.
+- **Live Markdown Preview**: 글 작성 중 실시간으로 결과물을 확인하는 최적의 편집 환경.
+- **Auto-Commit CMS**: 글 작성 즉시 GitHub API를 통해 저장소에 커밋되어 별도 DB 없이 콘텐츠 관리.
 
-### ✍️ Content Management (Git-as-CMS)
-- **Live Markdown Preview**: 작성 중인 글을 실시간으로 렌더링하여 확인 가능.
-- **Auto-Commit Integration**: GitHub API를 통해 작성된 글을 즉시 저장소에 커밋 및 배포 트리거.
-- **MDX support**: Markdown 내에서 컴포넌트를 사용할 수 있는 유연한 콘텐츠 구조.
+### 2. 고성능 블로그 엔진
+- **Next.js 15+ App Router**: 최신 서버 컴포넌트 기반의 빠른 로딩과 SEO 최적화.
+- **MDX 기반 포스팅**: 마크다운의 간결함과 리액트 컴포넌트의 유연함을 결합.
+- **반응형 디자인**: 모든 디바이스에서 최적화된 "Midnight Aurora" 테마 경험.
 
-### 🎨 Design & Interaction
-- **Midnight Aurora Theme**: 다크 모드 기반의 고화질 그래디언트 및 광원 효과.
-- **Glassmorphism UI**: 투명도와 블러 효과를 통한 깊이감 있는 인터페이스.
-- **Micro-interactions**: Framer Motion을 활용한 부드러운 페이지 전환 및 사이드바 애니메이션.
+---
 
-## 📂 프로젝트 구조 (Project Structure)
+## 🤖 AI 에이전트 협업 과정 (AI Collaboration)
 
-```text
-src/
-├── app/               # Next.js App Router (Pages & API)
-│   ├── admin/         # 관리자 페이지 및 전용 컴포넌트
-│   ├── blog/          # 게시글 목록 및 상세 페이지
-│   └── api/           # OAuth 및 인증 관련 API 라우트
-├── components/        # 공통 UI 컴포넌트 (Navbar, Footer, UI 패턴)
-├── content/           # 블로그 포스트 데이터 (MDX 파일)
-├── lib/               # 유틸리티 및 GitHub API 연동 로직
-└── styles/           # 전역 스타일 설정
-```
+이번 프로젝트는 **안티 그래비티(Antigravity)** 환경에서 AI 에이전트와 페어 프로그래밍을 진행하며 개발되었습니다. 
+
+- **기획 및 아키텍처**: "Git-as-CMS" 방식의 서버리스 블로그 구조를 AI와 함께 설계했습니다.
+- **UI/UX 구현**: Tailwind CSS 4와 Framer Motion을 활용한 고난도 애니메이션 효과를 AI의 제안으로 완성했습니다.
+- **문서화 및 폴리싱**: 사용자 경험을 고려한 문구 다듬기와 지금 보고 계신 README까지 협업의 결과물입니다.
+
+---
+
+## 🛠 기술 스택 (Tech Stack)
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS, Framer Motion
+- **Auth**: GitHub OAuth
+- **Data Management**: GitHub REST API
+- **Icons**: Lucide React
+- **Content**: MDX (`next-mdx-remote`)
+
+---
 
 ## 🚀 시작하기 (Getting Started)
 
-1. **의존성 설치**:
-   ```bash
-   npm install
-   ```
-
-2. **환경 변수 설정**:
-   `.env.local` 파일을 생성하고 다음 항목을 입력합니다.
+1. **의존성 설치**: `npm install`
+2. **환경 변수 설정**: `.env.local` 파일에 아래 항목을 입력합니다.
    - `GITHUB_CLIENT_ID` / `GITHUB_CLIENT_SECRET` (OAuth App)
    - `GITHUB_TOKEN` (Personal Access Token with `repo` scope)
-   - `NEXT_PUBLIC_BASE_URL` (Deployment URL)
-
-3. **개발 서버 실행**:
-   ```bash
-   npm run dev
-   ```
+   - `NEXT_PUBLIC_BASE_URL` (Local: `http://localhost:3000`)
+3. **개발 서버 실행**: `npm run dev`
 
 ---
-© 2024 **Park Secheol**. All rights reserved.
+
+## 👤 연락처 (Contact)
+
+작성자: **박세철 (Park Secheol)**
+- 📧 Email: minimini010318@gmail.com
+- 🐙 GitHub: [github.com/seru1027](https://github.com/seru1027)
+
+---
+
+> 본 항목은 전공기초세미나 수업 과제의 결과물입니다. AI와 인간의 협업이 만들어낼 수 있는 창의적인 웹 경험을 목표로 제작되었습니다.
