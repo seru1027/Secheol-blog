@@ -9,17 +9,6 @@
 ![Home Screen](./public/images/screenshots/home.png)
 *메인 화면: Midnight Aurora 테마와 글래스모피즘이 적용된 디자인*
 
-````carousel
-![Blog List](./public/images/screenshots/blog_list.png)
-<!-- slide -->
-![Admin Login](./public/images/screenshots/admin_login.png)
-<!-- slide -->
-![Admin Editor](./public/images/screenshots/admin_dashboard.png)
-<!-- slide -->
-![Admin Preview](./public/images/screenshots/admin_preview.png)
-````
-*순서대로: 블로그 포스트 목록, 어드민 로그인, 마크다운 에디터, 실시간 프리뷰*
-
 ---
 
 ## 🌐 라이브 사이트 (Live Demo)
