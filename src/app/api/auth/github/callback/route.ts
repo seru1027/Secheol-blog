@@ -60,6 +60,6 @@ export async function GET(req: NextRequest) {
     });
     return redirect("/admin");
   } else {
-    return NextResponse.json({ error: "Unauthorized user" }, { status: 403 });
+    return redirect("/unauthorized");
   }
 }
