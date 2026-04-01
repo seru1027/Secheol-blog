@@ -21,6 +21,8 @@
 ### 1. 전용 어드민 대시보드
 - **GitHub OAuth Login**: 특정 사용자(`seru1027`) 전용 보안 로그인 시스템.
   ![Admin Login](./public/images/screenshots/admin_login.png)
+- **보안 강화 및 권한 제어**: 허가되지 않은 사용자가 접근 시, 전용 에러 페이지(`Unauthorized`)로 리다이렉트되어 시스템 오용 방지.
+  ![Unauthorized Access](./public/images/screenshots/unauthorized.png)
 - **Live Markdown Preview**: 글 작성 중 실시간으로 결과물을 확인하는 최적의 편집 환경.
   ![Admin Editor](./public/images/screenshots/admin_dashboard.png)
 - **Auto-Commit CMS**: 글 작성 즉시 GitHub API를 통해 저장소에 커밋되어 별도 DB 없이 콘텐츠 관리.
