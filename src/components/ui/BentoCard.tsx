@@ -2,14 +2,16 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 interface BentoCardProps {
   children: ReactNode;
   className?: string;
   isFeatured?: boolean;
+  href?: string;
 }
 
-export default function BentoCard({ children, className, isFeatured }: BentoCardProps) {
+export default function BentoCard({ children, className, isFeatured, href }: BentoCardProps) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -22,6 +24,8 @@ export default function BentoCard({ children, className, isFeatured }: BentoCard
   // For the background glow position
   const glowX = useTransform(mouseXSpring, [-0.5, 0.5], ["0%", "100%"]);
   const glowY = useTransform(mouseYSpring, [-0.5, 0.5], ["0%", "100%"]);
+
+  const router = useRouter();
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -44,6 +48,10 @@ export default function BentoCard({ children, className, isFeatured }: BentoCard
     y.set(0);
   };
 
+  const handleClick = () => {
+    if (href) router.push(href);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -52,6 +60,7 @@ export default function BentoCard({ children, className, isFeatured }: BentoCard
       transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onClick={handleClick}
       style={{
         rotateX,
         rotateY,
@@ -59,13 +68,14 @@ export default function BentoCard({ children, className, isFeatured }: BentoCard
       }}
       className={cn(
         "glass-card group flex flex-col relative will-change-transform",
+        href && "cursor-pointer",
         isFeatured ? "bento-item-featured" : "",
         className
       )}
     >
       <div 
         style={{ transform: "translateZ(40px)" }} 
-        className="flex flex-col h-full relative z-10 pointer-events-none"
+        className="flex flex-col h-full relative z-10"
       >
         {children}
       </div>

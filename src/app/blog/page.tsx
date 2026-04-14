@@ -24,7 +24,11 @@ export default function BlogPage() {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {allPostsData.map((post) => (
-            <BentoCard key={post.slug} className="p-8">
+            <BentoCard 
+              key={post.slug} 
+              href={`/blog/${post.slug}`}
+              className="p-8"
+            >
               <div className="flex flex-col h-full">
                 <div className="flex items-center gap-x-4 mb-6">
                   <time dateTime={post.date} className="editorial-label">

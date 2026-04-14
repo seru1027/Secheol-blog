@@ -77,7 +77,11 @@ export default function Home() {
           <div className="bento-grid">
             {/* Featured Post */}
             {featuredPost && (
-              <BentoCard isFeatured className="p-8 md:p-12 justify-center">
+              <BentoCard 
+                isFeatured 
+                href={`/blog/${featuredPost.slug}`}
+                className="p-8 md:p-12 justify-center"
+              >
                 <div className="flex-1">
                   <div className="flex items-center gap-x-4 mb-6">
                     <time dateTime={featuredPost.date} className="editorial-label">
@@ -108,7 +112,11 @@ export default function Home() {
 
             {/* Other Recent Posts */}
             {recentPosts.map((post) => (
-              <BentoCard key={post.slug} className="p-8">
+              <BentoCard 
+                key={post.slug} 
+                href={`/blog/${post.slug}`}
+                className="p-8"
+              >
                 <div className="flex flex-col h-full">
                   <div className="flex items-center gap-x-4 mb-6">
                     <time dateTime={post.date} className="editorial-label">
