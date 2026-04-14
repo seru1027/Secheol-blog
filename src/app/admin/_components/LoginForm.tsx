@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldAlert } from "lucide-react";
-import { GithubIcon as Github } from "@/components/ui/Icons";
+import { GithubIcon as Github, ShieldAlertIcon as ShieldAlert } from "@/components/ui/Icons";
 
 export default function LoginForm() {
   const handleLogin = () => {

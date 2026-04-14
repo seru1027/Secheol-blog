@@ -1,8 +1,13 @@
 "use client";
 
 import { logout } from "../actions";
-import { LayoutDashboard, LogOut, Activity, Database, Server } from "lucide-react";
-import { LayoutDashboardIcon, LogOutIcon } from "@/components/ui/Icons";
+import { 
+  LayoutDashboardIcon, 
+  LogOutIcon, 
+  ActivityIcon, 
+  DatabaseIcon, 
+  ServerIcon 
+} from "@/components/ui/Icons";
 import { motion } from "framer-motion";
 
 export default function AdminHeader() {
@@ -33,11 +38,11 @@ export default function AdminHeader() {
             <div className="flex items-center gap-6">
               <div className="flex flex-col">
                 <span className="text-[8px] text-zinc-600 uppercase font-black tracking-widest mb-1">Status</span>
-                <Activity className="h-3 w-3 text-zinc-400" />
+                <ActivityIcon className="h-3 w-3 text-zinc-400" />
               </div>
               <div className="flex flex-col">
                 <span className="text-[8px] text-zinc-600 uppercase font-black tracking-widest mb-1">Server</span>
-                <Server className="h-3 w-3 text-zinc-400" />
+                <ServerIcon className="h-3 w-3 text-zinc-400" />
               </div>
             </div>
           </div>

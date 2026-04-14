@@ -70,3 +70,86 @@ export const ShieldAlertIcon = ({ className, ...props }: LucideProps) => (
     <path d="M12 16h.01"/>
   </svg>
 );
+
+export const ActivityIcon = ({ className, ...props }: LucideProps) => (
+  <svg 
+    className={className} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+    {...props}
+  >
+    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+  </svg>
+);
+
+export const DatabaseIcon = ({ className, ...props }: LucideProps) => (
+  <svg 
+    className={className} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+    {...props}
+  >
+    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+    <path d="M3 5V19A9 3 0 0 0 21 19V5"/>
+    <path d="M3 12A9 3 0 0 0 21 12"/>
+  </svg>
+);
+
+export const ServerIcon = ({ className, ...props }: LucideProps) => (
+  <svg 
+    className={className} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+    {...props}
+  >
+    <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/>
+    <rect width="20" height="8" x="2" y="14" rx="2" ry="2"/>
+    <line x1="6" x2="6.01" y1="6" y2="6"/>
+    <line x1="6" x2="6.01" y1="18" y2="18"/>
+  </svg>
+);
+
+export const CheckCircleIcon = ({ className, ...props }: LucideProps) => (
+  <svg 
+    className={className} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+    <polyline points="22 4 12 14.01 9 11.01"/>
+  </svg>
+);
+
+export const AlertCircleIcon = ({ className, ...props }: LucideProps) => (
+  <svg 
+    className={className} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+    {...props}
+  >
+    <circle cx="12" cy="12" r="10"/>
+    <line x1="12" x2="12" y1="8" y2="12"/>
+    <line x1="12" x2="12.01" y1="16" y2="16"/>
+  </svg>
+);

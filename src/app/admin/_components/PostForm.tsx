@@ -7,8 +7,6 @@ import {
   Edit3, 
   Send, 
   Loader2, 
-  AlertCircle, 
-  CheckCircle2, 
   Bold, 
   Italic, 
   Heading, 
@@ -16,9 +14,13 @@ import {
   Quote, 
   Code, 
   List, 
-  Activity,
   Image as ImageIcon 
 } from "lucide-react";
+import { 
+  ActivityIcon as Activity, 
+  CheckCircleIcon as CheckCircle2, 
+  AlertCircleIcon as AlertCircle 
+} from "@/components/ui/Icons";
 import ReactMarkdown from "react-markdown";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
