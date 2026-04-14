@@ -16,6 +16,7 @@ import {
   Quote, 
   Code, 
   List, 
+  Activity,
   Image as ImageIcon 
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
