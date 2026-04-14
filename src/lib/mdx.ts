@@ -4,14 +4,7 @@ import matter from "gray-matter";
 
 const postsDirectory = path.join(process.cwd(), "src/content/posts");
 
-export interface Post {
-  slug: string;
-  title: string;
-  date: string;
-  description: string;
-  category: string;
-  content: string;
-}
+import { Post } from "@/types/blog";
 
 export function getSortedPostsData() {
   // Get file names under /posts

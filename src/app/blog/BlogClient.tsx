@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { Search, Filter, MoveRight, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Post } from "@/lib/mdx";
+import type { Post } from "@/types/blog";
 import { formatDate, cn } from "@/lib/utils";
 import BentoCard from "@/components/ui/BentoCard";
 import { CATEGORIES, CATEGORY_COLORS } from "@/lib/constants";

@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShieldAlert, ArrowLeft, Lock } from "lucide-react";
+import { ShieldAlertIcon as ShieldAlert, ArrowLeft, Lock } from "lucide-react";
+import { ShieldAlertIcon } from "@/components/ui/Icons";
 
 export default function UnauthorizedPage() {
   return (

@@ -1,7 +1,8 @@
 "use client";
 
 import { logout } from "../actions";
-import { LogOut, LayoutDashboard, Activity, Database, Server } from "lucide-react";
+import { LayoutDashboard, LogOut, Activity, Database, Server } from "lucide-react";
+import { LayoutDashboardIcon, LogOutIcon } from "@/components/ui/Icons";
 import { motion } from "framer-motion";
 
 export default function AdminHeader() {
@@ -10,7 +11,7 @@ export default function AdminHeader() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-12">
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 rounded-2xl bg-primary/5 border border-primary/20 flex items-center justify-center text-primary shadow-[0_0_20px_rgba(0,229,255,0.1)]">
-            <LayoutDashboard className="w-7 h-7" />
+            <LayoutDashboardIcon className="w-7 h-7" />
           </div>
           <div>
             <h1 className="text-4xl font-black font-display tracking-tighter leading-none mb-2">
@@ -46,7 +47,7 @@ export default function AdminHeader() {
             className="w-12 h-12 flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-zinc-400 hover:text-white hover:bg-white/10 transition-all group"
             title="Terminate Session"
           >
-            <LogOut className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            <LogOutIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
           </button>
         </div>
       </div>
