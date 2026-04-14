@@ -153,17 +153,26 @@ export default function PostForm() {
             </div>
           </div>
 
-          <div className="space-y-2">
-            <label className="text-sm font-semibold text-zinc-400 ml-1">Category</label>
-            <input
-              name="category"
-              type="text"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              placeholder="e.g. Technology, Development, Design"
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-primary/50 transition-all text-white placeholder:text-zinc-600 font-medium"
-              required
-            />
+          <div className="space-y-4">
+            <label className="text-sm font-semibold text-zinc-400 ml-1 block">Category</label>
+            <div className="flex flex-wrap gap-3">
+              {["Project", "DevLog", "Insights"].map((cat) => (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => setCategory(cat)}
+                  className={cn(
+                    "px-6 py-2.5 rounded-xl border text-sm font-bold transition-all",
+                    category === cat
+                      ? "bg-primary border-primary text-white shadow-[0_0_15px_rgba(59,130,246,0.5)] scale-105"
+                      : "bg-white/5 border-white/10 text-zinc-400 hover:border-white/20 hover:text-zinc-300"
+                  )}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+            <input type="hidden" name="category" value={category} />
           </div>
 
           <div className="space-y-2">

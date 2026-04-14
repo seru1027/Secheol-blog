@@ -2,7 +2,7 @@
 title: "Next.js 15와 함께하는 블로그 개발"
 date: "2026-03-31"
 description: "최신 Next.js 기능을 활용하여 빠르고 세련된 개인 블로그를 구축하는 방법을 소개합니다."
-category: "Next.js"
+category: "DevLog"
 ---
 
 # Hello World

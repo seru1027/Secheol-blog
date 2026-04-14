@@ -1,11 +1,11 @@
 ---
-title: "디자인 시스템의 진화: Stitch와 함께한 'The Luminous Architect' 과업기"
+title: "[DevLog] 블로그 디자인 현대화: Stitch 기반 'The Luminous Architect' 테마 적용"
 date: "2026-04-14"
 description: "Stitch 디자인 시스템을 활용하여 블로그의 UI/UX를 현대적인 '에디토리얼 테크' 스타일로 완전히 개편했습니다."
-category: "Design"
+category: "DevLog"
 ---
 
-단순한 기능 구현을 넘어, 이제는 **사용자 경험(UX)과 시각적 완성도**가 기술 블로그의 정체성을 결정짓는 시대입니다. 오늘은 Stitch 디자인 시스템을 활용해 블로그의 UI를 더욱 프리미엄하고 직관적으로 진화시킨 과정을 공유하고자 합니다.
+블로그를 넘어 하나의 '작품'이 될 수 있도록, **Stitch 디자인 시스템**을 도입하여 UI/UX를 전면 개편했습니다. 이번 현대화 작업을 통해 추구했던 핵심 가치와 기술적인 변화들을 기록합니다.
 
 ### 🏛️ 새로운 컨셉: "The Luminous Architect"
 
