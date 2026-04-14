@@ -6,10 +6,11 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { formatDate } from "@/lib/utils";
 import BentoCard from "@/components/ui/BentoCard";
 import { motion } from "framer-motion";
+import type { PostMetadata } from "@/types/blog";
 
 interface HomeClientProps {
-  featuredPost: any;
-  recentPosts: any[];
+  featuredPost: PostMetadata;
+  recentPosts: PostMetadata[];
 }
 
 export default function HomeClient({ featuredPost, recentPosts }: HomeClientProps) {

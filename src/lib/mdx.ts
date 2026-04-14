@@ -4,9 +4,9 @@ import matter from "gray-matter";
 
 const postsDirectory = path.join(process.cwd(), "src/content/posts");
 
-import { Post } from "@/types/blog";
+import { Post, PostMetadata } from "@/types/blog";
 
-export function getSortedPostsData() {
+export function getSortedPostsData(): PostMetadata[] {
   // Get file names under /posts
   if (!fs.existsSync(postsDirectory)) {
     return [];
@@ -42,7 +42,7 @@ export function getSortedPostsData() {
   });
 }
 
-export async function getPostData(slug: string) {
+export async function getPostData(slug: string): Promise<Post> {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 

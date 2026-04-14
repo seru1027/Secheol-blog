@@ -4,13 +4,13 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { Search, Filter, MoveRight, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import type { Post } from "@/types/blog";
+import type { Post, PostMetadata } from "@/types/blog";
 import { formatDate, cn } from "@/lib/utils";
 import BentoCard from "@/components/ui/BentoCard";
 import { CATEGORIES, CATEGORY_COLORS } from "@/lib/constants";
 
 interface BlogClientProps {
-  posts: Post[];
+  posts: PostMetadata[];
 }
 
 export default function BlogClient({ posts }: BlogClientProps) {
