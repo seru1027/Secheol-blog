@@ -12,12 +12,13 @@ export default function BlogPage() {
     <div className="pt-32 pb-24 min-h-screen">
       <Container>
         <div className="max-w-2xl mb-16">
-          <h1 className="font-display text-5xl font-extrabold tracking-tight sm:text-7xl mb-6">
+          <span className="editorial-label text-primary mb-4 block">Archive</span>
+          <h1 className="font-display text-5xl font-extrabold tracking-tighter sm:text-7xl mb-6 text-glow">
             Digital <span className="text-gradient">Archive.</span>
           </h1>
           <p className="text-xl text-zinc-500 leading-relaxed font-medium">
             시스템 아키텍처부터 인터페이스 디자인까지, <br />
-            매일 마주하는 기술적 고민과 통찰을 기록합니다.
+            기술적 고민과 통찰을 정제하여 기록합니다.
           </p>
         </div>
 
@@ -25,16 +26,16 @@ export default function BlogPage() {
           {allPostsData.map((post) => (
             <BentoCard key={post.slug} className="p-8">
               <div className="flex flex-col h-full">
-                <div className="flex items-center gap-x-4 mb-4 text-xs">
-                  <time dateTime={post.date} className="text-zinc-500 font-medium">
+                <div className="flex items-center gap-x-4 mb-6">
+                  <time dateTime={post.date} className="editorial-label">
                     {formatDate(post.date)}
                   </time>
-                  <span className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-primary font-bold uppercase tracking-tighter">
+                  <span className="px-2 py-0.5 rounded-md bg-primary/10 text-primary editorial-label">
                     {post.category}
                   </span>
                 </div>
                 
-                <h2 className="text-2xl font-bold leading-8 mb-4 group-hover:text-primary transition-colors">
+                <h2 className="text-2xl font-extrabold leading-tight mb-4 group-hover:text-primary transition-colors tracking-tight">
                   <Link href={`/blog/${post.slug}`}>
                     {post.title}
                   </Link>
@@ -50,7 +51,7 @@ export default function BlogPage() {
                     className="flex items-center justify-between text-xs font-bold uppercase tracking-widest text-zinc-400 group/link hover:text-white transition-colors"
                   >
                     Read Implementation
-                    <MoveRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+                    <MoveRight className="h-4 w-4 group-hover/link:translate-x-2 transition-transform" />
                   </Link>
                 </div>
               </div>
