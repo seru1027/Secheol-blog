@@ -49,7 +49,12 @@ export default function BentoCard({ children, className, isFeatured, href }: Ben
   };
 
   const handleClick = () => {
-    if (href) router.push(href);
+    if (!href) return;
+    if (href.startsWith("http")) {
+      window.open(href, "_blank", "noopener,noreferrer");
+    } else {
+      router.push(href);
+    }
   };
 
   return (

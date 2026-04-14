@@ -10,8 +10,10 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "/" },
+  { name: "Projects", href: "/projects" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
+  { name: "Now", href: "/now" },
 ];
 
 export default function Navbar() {
@@ -50,15 +52,21 @@ export default function Navbar() {
       >
         <Container>
           <div className={cn(
-            "flex h-16 items-center justify-between px-8 rounded-2xl transition-all duration-500",
-            scrolled ? "glass shadow-2xl" : "bg-transparent"
+            "flex h-14 items-center justify-between px-8 rounded-2xl transition-all duration-700 relative overflow-hidden",
+            scrolled 
+              ? "bg-surface-low/80 backdrop-blur-2xl shadow-[0_0_50px_rgba(0,0,0,0.3)]" 
+              : "bg-transparent"
           )}>
-            <div className="flex items-center gap-12">
+            {/* Architectural 0.5px border wrapper for scrolled state */}
+            {scrolled && (
+              <div className="absolute inset-0 rounded-2xl border border-white/[0.05] pointer-events-none" />
+            )}
+            <div className="flex items-center gap-12 relative z-10">
               <Link href="/" className="group flex items-center gap-2">
-                <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-xl shadow-[0_0_20px_rgba(177,198,255,0.4)] transition-transform group-hover:scale-110">
+                <div className="h-7 w-7 rounded-lg bg-primary flex items-center justify-center text-white font-black text-sm shadow-[0_0_20px_rgba(0,229,255,0.3)] transition-transform group-hover:scale-110">
                   S
                 </div>
-                <span className="text-xl font-bold font-display text-white tracking-tighter transition-colors group-hover:text-primary">
+                <span className="text-lg font-black font-display text-white tracking-tighter transition-colors group-hover:text-primary">
                   SECHEOL
                 </span>
               </Link>
@@ -69,10 +77,10 @@ export default function Navbar() {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "px-4 py-2 editorial-label transition-all duration-300 rounded-lg hover:bg-white/5",
+                      "px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] transition-all duration-300 rounded-lg hover:bg-white/5",
                       pathname === item.href
-                        ? "text-primary bg-white/5"
-                        : "text-zinc-500 hover:text-white"
+                        ? "text-primary bg-primary/5"
+                        : "text-zinc-500 hover:text-zinc-200"
                     )}
                   >
                     {item.name}
@@ -81,12 +89,12 @@ export default function Navbar() {
               </nav>
             </div>
             
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-6 relative z-10">
               <Link
                 href="/about"
-                className="hidden md:flex items-center justify-center rounded-xl bg-white/5 px-5 py-2.5 text-[10px] font-bold uppercase tracking-widest text-white hover:bg-primary transition-all duration-500 hover:shadow-[0_0_25px_rgba(177,198,255,0.3)]"
+                className="hidden md:flex items-center justify-center rounded-lg bg-white/[0.03] border border-white/[0.05] px-6 py-2 text-[9px] font-black uppercase tracking-[0.3em] text-zinc-400 hover:text-white hover:bg-primary/20 hover:border-primary/40 transition-all duration-500"
               >
-                Let&apos;s Talk
+                PROXIMITY
               </Link>
 
               <button

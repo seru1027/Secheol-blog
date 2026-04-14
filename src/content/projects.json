@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Secheol Blog",
+    "description": "A premium technical blog built with Next.js 16 and a GitHub-based CMS. Features a 'Luminous Architect' design system.",
+    "tech": ["Next.js", "Tailwind CSS", "Framer Motion", "GitHub API"],
+    "link": "https://github.com/seru1027/Secheol-blog",
+    "blogSlug": "uiux-modernization-stitch",
+    "isFeatured": true
+  },
+  {
+    "title": "ENIAC Project (Dashboard)",
+    "description": "'방구석 클라우드' 인프라 관제를 위한 실시간 시스템 대시보드 개발. Next.js를 기반으로 사용자 중심의 시스템 상태 모니터링 및 자원 조작 인터페이스를 설계하고 구현했습니다.",
+    "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    "link": "https://github.com/seru1027/ENIAC-Project",
+    "isFeatured": true
+  }
+]

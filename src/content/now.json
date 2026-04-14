@@ -1,0 +1,26 @@
+{
+  "status": "개인 프로젝트들의 아키텍처를 고도화하고 기술적인 성장을 기록하는 데 집중하고 있습니다.",
+  "updated": "2026-04-14",
+  "focus": [
+    {
+      "title": "Projects",
+      "items": [
+        "ENIAC 방구석클라우드 DASHBOARD",
+        "개인 기술 블로그 구축"
+      ]
+    },
+    {
+      "title": "Learning",
+      "items": [
+        "언어 공부 (C, Python, JavaScript)",
+        "REACT, NEXT.JS"
+      ]
+    },
+    {
+      "title": "Habits",
+      "items": [
+        "1일 1커밋 (지속 가능한 성장)"
+      ]
+    }
+  ]
+}
