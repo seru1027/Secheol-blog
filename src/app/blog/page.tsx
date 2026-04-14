@@ -2,66 +2,69 @@ import Container from "@/components/ui/Container";
 import { getSortedPostsData } from "@/lib/mdx";
 import Link from "next/link";
 import { formatDate } from "@/lib/utils";
+import BentoCard from "@/components/ui/BentoCard";
+import { MoveRight } from "lucide-react";
 
 export default function BlogPage() {
   const allPostsData = getSortedPostsData();
 
   return (
-    <div className="py-16 lg:py-24">
+    <div className="pt-32 pb-24 min-h-screen">
       <Container>
-        <div className="max-w-2xl">
-          <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
-            블로그
+        <div className="max-w-2xl mb-16">
+          <h1 className="font-display text-5xl font-extrabold tracking-tight sm:text-7xl mb-6">
+            Digital <span className="text-gradient">Archive.</span>
           </h1>
-          <p className="mt-6 text-base text-muted-foreground">
-            기술, 디자인, 그리도 일상에 대한 생각들을 나눕니다.
+          <p className="text-xl text-zinc-500 leading-relaxed font-medium">
+            시스템 아키텍처부터 인터페이스 디자인까지, <br />
+            매일 마주하는 기술적 고민과 통찰을 기록합니다.
           </p>
         </div>
 
-        <div className="mt-16 sm:mt-20">
-          <div className="grid gap-12 lg:grid-cols-1">
-            {allPostsData.map((post) => (
-              <article key={post.slug} className="group relative flex flex-col items-start">
-                <h2 className="text-2xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {allPostsData.map((post) => (
+            <BentoCard key={post.slug} className="p-8">
+              <div className="flex flex-col h-full">
+                <div className="flex items-center gap-x-4 mb-4 text-xs">
+                  <time dateTime={post.date} className="text-zinc-500 font-medium">
+                    {formatDate(post.date)}
+                  </time>
+                  <span className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-primary font-bold uppercase tracking-tighter">
+                    {post.category}
+                  </span>
+                </div>
+                
+                <h2 className="text-2xl font-bold leading-8 mb-4 group-hover:text-primary transition-colors">
                   <Link href={`/blog/${post.slug}`}>
-                    <span className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-accent/50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:-inset-x-6 sm:rounded-2xl" />
-                    <span className="relative z-10">{post.title}</span>
+                    {post.title}
                   </Link>
                 </h2>
-                <time
-                  className="relative z-10 order-first mb-3 flex items-center text-sm text-muted-foreground"
-                  dateTime={post.date}
-                >
-                  <span className="h-4 w-0.5 rounded-full bg-border mr-3" aria-hidden="true" />
-                  {formatDate(post.date)}
-                </time>
-                <p className="relative z-10 mt-2 text-sm text-muted-foreground">
+                
+                <p className="text-sm text-zinc-500 line-clamp-3 mb-8 flex-1">
                   {post.description}
                 </p>
-                <div
-                  aria-hidden="true"
-                  className="relative z-10 mt-4 flex items-center text-sm font-medium text-primary"
-                >
-                  포스트 읽기
-                  <svg
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    aria-hidden="true"
-                    className="ml-1 h-4 w-4 stroke-current"
+                
+                <div className="mt-auto pt-6 border-t border-white/5">
+                  <Link 
+                    href={`/blog/${post.slug}`} 
+                    className="flex items-center justify-between text-xs font-bold uppercase tracking-widest text-zinc-400 group/link hover:text-white transition-colors"
                   >
-                    <path
-                      d="M6.75 5.75 9.25 8l-2.5 2.25"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                    Read Implementation
+                    <MoveRight className="h-4 w-4 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
-              </article>
-            ))}
-          </div>
+              </div>
+            </BentoCard>
+          ))}
         </div>
       </Container>
+
+      {/* Background Decorative elements */}
+      <div className="fixed top-0 left-0 -z-10 w-full h-full pointer-events-none overflow-hidden opacity-20">
+        <div className="absolute top-[20%] right-[-10%] w-[40rem] h-[40rem] bg-indigo-500/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-[-10%] w-[30rem] h-[30rem] bg-cyan-500/10 rounded-full blur-[100px]" />
+      </div>
     </div>
   );
 }
+

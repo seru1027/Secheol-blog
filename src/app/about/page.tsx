@@ -1,62 +1,103 @@
 import Container from "@/components/ui/Container";
+import BentoCard from "@/components/ui/BentoCard";
+import { Mail, Zap, Code, Database, Rocket } from "lucide-react";
+
+const GithubIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+  </svg>
+);
 
 export default function AboutPage() {
   return (
-    <div className="py-16 lg:py-24">
+    <div className="pt-32 pb-24 min-h-screen">
       <Container>
-        <div className="max-w-3xl">
-          <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl text-gradient">
-            👨‍💻 저를 소개합니다: 박세철
+        {/* Header Section */}
+        <div className="max-w-3xl mb-16">
+          <h1 className="font-display text-5xl font-extrabold tracking-tight sm:text-7xl mb-8">
+            The <span className="text-gradient">Architect.</span>
           </h1>
-          <div className="mt-12 prose prose-invert prose-indigo lg:prose-lg">
-            <h2 className="text-2xl font-bold">Intro</h2>
-            <p>
-              안녕하세요! 사용자에게 닿는 첫 화면의 즐거움을 설계하고, 그 뒤의 견고한 로직까지 책임지고 싶은 예비 풀스택 개발자 박세철입니다.
-            </p>
-            <p>
-              저는 기술이 단순한 코드를 넘어 실제 문제를 해결하는 강력한 도구가 될 때 큰 매력을 느낍니다. 현재는 웹의 본질을 탐구하며, 기초부터 차근차근 기술적 스펙트럼을 넓혀가고 있습니다.
-            </p>
+          <p className="text-xl text-zinc-400 leading-relaxed font-medium">
+            사용자에게 닿는 즐거움과 데이터의 견고한 흐름을 동시에 고민하는 
+            내일의 풀스택 개발자, 박세철입니다.
+          </p>
+        </div>
 
-            <h2 className="text-2xl font-bold mt-12 text-indigo-400">Vision: From Frontend to Full-Stack</h2>
-            <p>
-              지금은 사용자와 가장 가까운 곳에서 소통하는 프론트엔드에 몰입하고 있지만, 저의 최종 목적지는 데이터의 흐름 전반을 설계하고 관리하는 풀스택 개발자입니다.
-            </p>
-
-            <h2 className="text-2xl font-bold mt-12">Current Focus</h2>
-            <ul>
-              <li><strong>Next.js 15 & React</strong>: 서버 컴포넌트와 최신 렌더링 전략을 학습하며 고성능 웹 서비스 구축을 연습합니다.</li>
-              <li><strong>Web Fundamentals</strong>: HTML, CSS, JavaScript의 본질을 이해하고 웹 표준을 준수하는 코드를 지향합니다.</li>
-            </ul>
-
-            <h3 className="text-xl font-bold mt-8 text-cyan-400">Future Goal</h3>
-            <p>
-              프론트엔드에서 쌓은 UI/UX 감각을 바탕으로, 효율적인 서버 로직과 데이터베이스 설계 능력을 갖춘 엔드 투 엔드(End-to-End) 개발 역량을 목표로 합니다.
-            </p>
-
-            <h2 className="text-2xl font-bold mt-12">Interest</h2>
-            <ul>
-              <li><strong>Web Ecosystem</strong>: Next.js 기반의 모던 프론트엔드 아키텍처</li>
-              <li><strong>AI Integration</strong>: 생성형 AI를 개발 워크플로우에 녹여 생산성을 극대화하는 방법</li>
-              <li><strong>System Design</strong>: 확장 가능하고 유지보수가 용이한 코드 구조 설계</li>
-            </ul>
-
-            <h2 className="text-2xl font-bold mt-12">Contact</h2>
-            <p>
-              새로운 기술을 배우고 적용하는 과정을 기록하는 이 블로그가 저에게는 성장의 밑거름이, 누군가에게는 유익한 정보가 되길 바랍니다. 협업 제안이나 기술적인 대화는 언제든 환영입니다!
-            </p>
-            <div className="mt-8 space-y-3 not-prose border-l-2 border-indigo-500/30 pl-4 py-1">
-              <p className="text-foreground/80 flex items-center gap-3">
-                <span className="text-xl">📧</span>
-                <span className="font-mono text-sm tracking-tight text-muted-foreground">minimini010318@gmail.com</span>
+        <div className="grid gap-8 lg:grid-cols-3">
+          {/* Main Intro Card */}
+          <BentoCard className="lg:col-span-2 p-10 justify-center">
+            <h2 className="text-4xl font-bold font-display mb-8">Philosophies</h2>
+            <div className="prose prose-invert prose-zinc max-w-none">
+              <p className="text-lg text-zinc-300 leading-relaxed">
+                저는 코드가 단순한 텍스트를 넘어 실제 문제를 해결하는 강력한 도구가 될 때 희열을 느낍니다. 
+                현재는 웹의 본질을 탐구하며, 최상의 사용자 경험을 제공하기 위한 기술적 스펙트럼을 넓히고 있습니다.
               </p>
-              <p className="text-foreground/80 flex items-center gap-3">
-                <span className="text-xl">🐙</span>
-                <span className="font-mono text-sm tracking-tight text-muted-foreground">github.com/seru1027</span>
+              <p className="text-lg text-zinc-300 leading-relaxed mt-6">
+                프론트엔드에서 시작해 백엔드 인프라까지, 엔드 투 엔드로 사고하는 개발자를 지향합니다.
               </p>
             </div>
-          </div>
+          </BentoCard>
+
+          {/* Contact Card */}
+          <BentoCard className="p-10 flex flex-col justify-between">
+            <div>
+              <h2 className="text-2xl font-bold font-display mb-8">Connect</h2>
+              <div className="space-y-6">
+                <a href="mailto:minimini010318@gmail.com" className="flex items-center gap-4 group/item">
+                  <div className="w-12 h-12 rounded-2xl glass flex items-center justify-center group-hover/item:border-primary transition-colors">
+                    <Mail className="h-5 w-5 text-zinc-400 group-hover/item:text-primary transition-colors" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Email</p>
+                    <p className="text-sm font-mono text-zinc-300">minimini010318@gmail.com</p>
+                  </div>
+                </a>
+                <a href="https://github.com/seru1027" target="_blank" className="flex items-center gap-4 group/item">
+                  <div className="w-12 h-12 rounded-2xl glass flex items-center justify-center group-hover/item:border-accent transition-colors">
+                    <GithubIcon className="h-5 w-5 text-zinc-400 group-hover/item:text-accent transition-colors" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Github</p>
+                    <p className="text-sm font-mono text-zinc-300">seru1027</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div className="mt-12 pt-8 border-t border-white/5">
+              <p className="text-xs text-zinc-500 font-medium">Available for world-class collaborations.</p>
+            </div>
+          </BentoCard>
+
+          {/* Core Tech Stack */}
+          <BentoCard className="p-10">
+            <Zap className="h-8 w-8 text-primary mb-6" />
+            <h3 className="text-xl font-bold mb-4 uppercase tracking-tighter">Performance</h3>
+            <p className="text-zinc-500 text-sm leading-relaxed">
+              Next.js 15, React, Server Components.
+              고성능 렌더링 전략과 웹 표준을 지향합니다.
+            </p>
+          </BentoCard>
+
+          <BentoCard className="p-10">
+            <Code className="h-8 w-8 text-accent mb-6" />
+            <h3 className="text-xl font-bold mb-4 uppercase tracking-tighter">Modern Web</h3>
+            <p className="text-zinc-500 text-sm leading-relaxed">
+              TypeScript & Tailwind CSS.
+              확장 가능하고 유지보수가 용이한 프론트엔드 아키텍처.
+            </p>
+          </BentoCard>
+
+          <BentoCard className="p-10">
+            <Database className="h-8 w-8 text-indigo-400 mb-6" />
+            <h3 className="text-xl font-bold mb-4 uppercase tracking-tighter">Fullstack Path</h3>
+            <p className="text-zinc-500 text-sm leading-relaxed">
+              엔드 투 엔드 개발 역량을 목표로 
+              백엔드와 인프라의 확장을 연구합니다.
+            </p>
+          </BentoCard>
         </div>
       </Container>
     </div>
   );
 }
+
