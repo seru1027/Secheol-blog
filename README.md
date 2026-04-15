@@ -1,4 +1,4 @@
-# 🌌 Secheol Blog: The Luminous Architect (AI ✕ Human 프로젝트)
+# 🌌 Secheol Blog
 
 본 프로젝트는 최신 AI 에이전트와 인간 개발자의 밀도 높은 협업을 통해, 단순히 기능만 갖춘 웹사이트를 넘어 현대적이고 프리미엄한 감성을 가진 기술 블로그를 완성하는 것을 목표로 했습니다.
 
