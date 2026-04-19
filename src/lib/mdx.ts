@@ -1,18 +1,16 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { generateDummyPosts, getDummyPostData } from "./dummy-posts";
+
 
 const postsDirectory = path.join(process.cwd(), "src/content/posts");
 
 import { Post, PostMetadata } from "@/types/blog";
 
 export function getSortedPostsData(): PostMetadata[] {
-  // Get file names under /posts
-  if (!fs.existsSync(postsDirectory)) {
-    return [];
-  }
-  const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames
+  const fileNames = fs.existsSync(postsDirectory) ? fs.readdirSync(postsDirectory) : [];
+  const realPosts = fileNames
     .filter((fileName) => fileName.endsWith(".md") || fileName.endsWith(".mdx"))
     .map((fileName) => {
       // Remove ".md" from file name to get slug
@@ -32,6 +30,12 @@ export function getSortedPostsData(): PostMetadata[] {
       };
     });
 
+  // Generate dummy posts to reach a total of 50
+  const dummyCount = Math.max(0, 50 - realPosts.length);
+  const virtualPosts = generateDummyPosts(dummyCount);
+
+  const allPostsData = [...realPosts, ...virtualPosts];
+
   // Sort posts by date
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {
@@ -43,6 +47,12 @@ export function getSortedPostsData(): PostMetadata[] {
 }
 
 export async function getPostData(slug: string): Promise<Post> {
+  // Check if it's a dummy post first
+  const dummyPost = getDummyPostData(slug);
+  if (dummyPost) {
+    return dummyPost;
+  }
+
   const fullPath = path.join(postsDirectory, `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
